@@ -1,0 +1,433 @@
+/* General */
+
+    *, ::before, ::after
+    {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    html
+    {
+        font-size: 62.5%;
+    }
+
+    body
+    {
+        width: 100%;
+        height: 100vh;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        background: rgb(30, 144, 255);
+    }
+
+    .container
+    {
+        display: grid;
+        grid-template-columns : 100px 1fr;
+        grid-template-rows : 70px 1fr 450px;
+    }
+
+/* Header */
+
+    /* Global */
+
+    header
+    {
+        grid-area: 1 / 1 / 3 / 2;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-template-rows: 70px 410px;
+        padding: 5px;
+        align-items: center;
+        background: rgb(30, 144, 255);
+        position : relative;
+        border-right: 6px ridge rgba(255, 253, 253, 0.6);
+        z-index: 2;
+    }
+
+    /* Logo */
+
+    header #logo
+    {
+        grid-area: 1 / 1 / 2 / 2;
+        width: 90px;
+        height: 60px;
+        padding-left: 15px;
+        transition: all 1s ease-in-out;
+    }
+
+    header #logo:hover
+    {
+        transform: scale(1.2);
+    }
+
+    /* Nav */
+
+    header nav
+    {
+        grid-area: 2 / 1 / 3 / 2;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0px;
+    }
+
+    header li
+    {
+        
+        border-radius: 50%;
+        width: 89px;
+        height: 89px;
+        margin: 10px 0;
+        padding: 10px 0 0 10px;
+        transition: box-shadow 0.7s ease-out;
+    }
+
+    header a
+    {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.6rem;
+    }
+
+    header li:hover
+    {
+        background: rgb(30, 144, 255);
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px 3px rgba(255, 253, 253, 0.6),
+        0px 0px 3px 3px rgba(223, 208, 208, 0.6),
+        inset 0px 0px 3px 3px rgba(255, 249, 249, 0.6),
+        inset 0px 0px 1px 3px rgba(255, 249, 249, 0.6),
+        inset 0px 0px 2px 3px rgba(255, 249, 249, 0.6);
+    }
+
+    header span
+    {
+        display: none;
+        padding-left: 25px;
+    }
+
+    header li:hover span
+    {
+        display: inline;
+    }
+
+    header nav img
+    {
+        width: 70px;
+        height: 70px;
+        filter:drop-shadow(0px 0px 3px rgb(227, 230, 218));
+    }
+
+    .header-active
+    {
+        filter:drop-shadow(0px 0px 5px rgb(227, 230, 218)) drop-shadow(0px 0px 5px rgb(0, 0, 0)) drop-shadow(0px 0px 5px rgb(0, 0, 0)) ;
+    }
+
+    /* Menu hamburger */
+
+    #menu
+    {
+        display: none;
+        position: relative;
+        top: -60px;
+    }
+
+    #hamburger
+    {
+        transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        top: 24px;
+    }
+
+    #hamburger:nth-of-type(1).active
+    {
+        transform: rotate(-135deg);
+        top: 24px;
+    }
+
+    #hamburger:nth-of-type(2).active
+    {
+        opacity: 0;
+    }
+
+    #hamburger:nth-of-type(3).active
+    {
+        transform: rotate(-225deg);
+        top: 24px;
+    }
+
+/* Footer */
+
+    /* Global */
+
+    .logofoot{
+        width: 60px;
+        height: 60px;
+    }
+
+    footer
+    {
+        grid-area: 3 / 1 / 4 / 3;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: rgb(30, 144, 255);
+        border-top: 6px ridge rgba(255, 253, 253, 0.6);
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    /* Titres */
+
+    footer h4
+    {
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        border-bottom: 5px solid black;
+        border-radius: 5px;
+    }
+
+    /* Listes */
+
+    footer li
+    {
+        list-style-type: none;
+        margin: 10px 0;
+        transition: all 0.5s ease;
+        font-size: 1.5rem;
+    }
+
+    .footer-nav li:hover
+    {
+        transform: scale(1.3);
+    }
+
+    /* Liens */
+
+    .footer-nav a
+    {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 900;
+        transition: all 0.5s ease;
+    }
+
+    .footer-nav a:hover
+    {
+        color:rgb(8, 4, 4);
+    }
+
+    /* Map interactive */
+
+    .map-responsive 
+    {
+        overflow:hidden;
+        position:relative;
+        height:250px;
+        width: 400px;
+    }
+        
+    .map-responsive iframe 
+    {
+        position:absolute;
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+    }
+
+    /* Icônes réseaux socieaux */
+
+    .social-links a
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-links i
+    {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 7px;
+        margin: 10px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+
+    .social-links i:hover
+    {
+        color:black;
+        background-color: white;
+    }
+
+    /* Main */
+
+    main
+    {
+        grid-area: 1 / 2 / 3 / 3; 
+        padding: 0 0 0 0px;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 200, 0.5));
+    }
+
+/* Media queries */
+
+    @media screen and (max-width:726px)
+    {
+        .map-responsive 
+        {
+            height:200px;
+            width: 400px;
+        }
+    }
+
+    @media screen and (max-width:600px)
+    {
+
+        /* Header */
+
+        header
+        {
+            display: block;
+            background:rgb(30, 144, 255);
+            border-bottom: 6px ridge rgba(255, 253, 253, 0.6);
+            border-right:none;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+        }
+
+        #logo
+        {
+            padding-top: 5px;
+        }
+
+        /* Navbar */
+
+        header nav
+        {
+            grid-area: 1 / 2 / 2 / 3;
+            position: relative;
+        }
+
+        header nav ul 
+        {
+            line-height: 70px;
+            width: 100%;
+            position: absolute;
+            top: 10px;
+            display: none;
+        }
+
+        header nav li
+        {
+            background: none;
+            border-radius: initial;
+            width: 100%;
+            display: block;
+            margin:0;
+            padding-left: 0;
+            border-bottom: 2px ridge rgba(255, 253, 253, 0.6);
+            background: rgb(30, 144, 255);
+        }
+
+        header nav li:hover
+        {
+            width: auto;
+            border-radius: initial;
+        }
+
+        header nav li a
+        {
+            display: inline;
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        header nav img
+        {   
+            display: none;
+        }
+
+        header span
+        {
+            display: inline;
+        }
+
+        /* Menu hamburger */
+
+        #menu
+        {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 9px 9px 0 auto;
+            border-radius: 5px;
+            border: 2px double rgb(255, 255, 255);
+            padding-left: 3px;
+        }
+
+        #hamburger
+        {
+            text-align: center;
+            width: 40px;
+            height: 4px;
+            background: rgb(255, 255, 255);
+        }
+
+        #hamburger:nth-of-type(1)
+        {
+            top: 10px;
+        }
+
+        #hamburger:nth-of-type(3)
+        {
+            top: 36px;
+        }
+
+        .affiche
+        {
+            display: block;
+        }
+
+        /* Main */
+
+        main
+        {
+            grid-area: 2 / 1 / 3 / 3; 
+        }
+
+    }
+
+    @media screen and (max-width:425px)
+    {
+        .map-responsive 
+        {
+            width: 325px;
+        }
+    }
+
+    @media screen and (max-width:350px)
+    {
+        .map-responsive 
+        {
+            width: 200px;
+        }
+    }
+
+    @media screen and (max-width:330px)
+    {
+        body
+        {
+            grid-template-rows : 70px 1fr 800px;
+        }
+    }

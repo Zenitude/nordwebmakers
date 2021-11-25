@@ -1,0 +1,550 @@
+/* Accueil */
+
+    /* Global */
+
+    #bodyAccueil
+    {
+        overflow: hidden;
+    }
+
+    .mainAccueil
+    {
+        min-height: 50vh;
+    }
+
+    /* Animation JS*/
+
+    #animJS
+    {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+    }
+
+    .mainAccueil .bulle
+    {
+        position: absolute;
+        pointer-events: none;
+        background: transparent;
+        border: 6px solid rgb(222, 151, 240);
+        border-radius: 50%;
+        animation : animeBulle 1.5s linear infinite;
+    }
+
+    #bulle2
+    {
+        background: rgb(222, 151, 240);
+    }
+
+    @keyframes animeBulle
+    {
+        0%
+        {
+            transform: scale(0) translateY(0) rotate(0);
+            opacity: 0;
+        }
+        10% 
+        {
+            opacity: 1;
+        }
+        90%
+        {
+            opacity: 1;
+        }
+        100%
+        {
+            transform: scale(1) translateY(50px) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    /* Video */
+
+    #animJS video
+    {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    .textAccueil
+    {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .textAccueil h1, .textAccueil h2
+    {
+        text-align: center;
+        font-size: 4rem;
+        color: rgba(255,255,255,0.5);
+    }
+
+    .textAccueil h2
+    {
+        padding-top: 10px;
+    }
+
+    @media screen and (max-width:800px)
+    {
+        #bodyAccueil
+        {
+            overflow: auto;
+        }
+
+        .mainAccueil
+        {
+            min-height: 100vh;
+        }
+
+
+    }
+
+/* Qui sommes nous ? */
+
+    .qui-sommes-nous
+    {
+        color: #fff;
+        text-align: center;
+        padding-bottom: 50px;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    .carteqsn
+    {
+        background: rgb(103, 199, 255);
+        border-radius: 10px;
+        max-width: 425px;
+        min-width: 280px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        color: #000;
+        padding: 10px 30px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        box-shadow: 5px 5px 10px 5px rgb(172, 165, 165);
+        transition: box-shadow 0.3s 0.5s ease-in-out, transform 0.5s 0.5s ease-in-out; 
+    }
+
+    .carteqsn-refonte
+    {
+        display: grid;
+        grid-template-columns:repeat(auto-fill,600px);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .carteqsn h3
+    {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+    }
+
+    .carteqsn:hover
+    {
+        box-shadow: 0 0 5px 5px rgb(1, 255, 255),
+        inset 0 0 6px 4px rgb(2, 91, 255),
+        inset 0 0 4px 4px rgb(12, 148, 130),
+        inset 0 0 4px 4px rgb(218, 147, 236);
+        transform: scale(1.2);
+    }
+
+    .carteqsn a
+    {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(255, 30, 30);
+        border-radius: 10px;
+        margin : 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        transition: border 0.3s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+    }
+ 
+    .carteqsn a:hover
+    {
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgb(30, 144, 255);
+        color: rgb(30, 144, 255);
+    }
+
+    .imge
+    {
+        border-radius: 20px;
+        width: 300px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .parallaxe
+    {
+        background: url('../ressources/quiSommesNous/reseau-internet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    } 
+
+    @media screen and ( max-width: 1350px )
+    { 
+        #ordi {order:1}
+        #ordi1{order:2}
+        #ordi2{order:4}
+        #ordi3{order:3}
+        #ordi4{order:5}
+        #ordi5{order:6}
+    }
+
+/* Services */
+
+    /* Global */
+
+    .main-services
+    {
+        color: #fff;
+    }
+
+    section
+    {
+        padding: 20px;
+    }
+
+    p
+    {
+        margin: 20px 0;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+    
+    .carte
+    {
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        max-width: 425px;
+        min-width: 280px;
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        color: #000;
+        padding: 10px 30px;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        box-shadow: 5px 5px 10px 5px rgb(172, 165, 165);
+        transition: box-shadow 0.3s 0.5s ease-in-out, transform 0.5s 0.5s ease-in-out; 
+    }
+
+    .carte h3
+    {
+        text-align: center;
+        color: rgb(30, 144, 255);
+        font-size: 1.9rem;
+    }
+
+    .main-services h1, .main-services h2
+    {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    /* Section Refonte & Offres*/
+
+    .section-refonte
+    {
+        background: url('../ressources/services/code.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .section-refonte, .section-refonte p, .section-offres
+    {
+        text-align: center;
+    }
+
+    .refonte-cartes
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 450px);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .offres-cartes
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 450px);
+        grid-template-rows: 1fr;
+        grid-gap: 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .section-refonte .carte:hover, .section-offres .carte:hover
+    {
+        box-shadow: 0 0 5px 5px rgb(218, 147, 236),
+        inset 0 0 6px 4px rgb(218, 147, 236),
+        inset 0 0 4px 4px rgb(218, 147, 236),
+        inset 0 0 4px 4px rgb(218, 147, 236);
+        transform: scale(1.2);
+    }
+
+    .carte a
+    {
+        width: 100%;
+        height: 40px;
+        background-color: rgb(30, 144, 255);
+        border-radius: 10px;
+        margin : 10px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        transition: border 0.3s ease-in-out, background-color 1s ease-in-out, color 1s ease-in-out;
+    }
+
+    .carte a:hover
+    {
+        background-color: rgb(255, 255, 255);
+        border: 2px solid rgb(30, 144, 255);
+        color: rgb(30, 144, 255);
+    }
+
+    /* Section importance */
+
+    .section-importance ul
+    {
+        padding-left: 20px;
+        line-height: 1.5;
+    }
+
+    .section-importance span
+    {
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    /* Section utilité */
+
+    .section-utilite
+    {
+        background-image: url('../ressources/services/web.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .grilleUtilite
+    {
+        max-width: 920px;
+        display: grid;
+        grid-template-columns: 70px 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        grid-gap: 20px 20px;
+        align-items: center;
+        color: #000;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .section-utilite h2
+    {
+        color: #000;
+    }
+
+    .section-utilite p
+    {
+        text-align: start;
+        padding: 0px 10px;
+        border-radius: 10px;
+        margin: 0;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+
+    .section-utilite span
+    {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: 675px)
+    {
+        .grilleUtilite
+        {
+            grid-template-rows: repeat(10, 100px);
+        }
+    }
+
+    @media screen and (max-width:600px)
+    {
+        .section-utilite
+        {
+            background-image: url('../ressources/services/web-small.jpg');
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width: 455px)
+    {
+        .refonte-cartes
+        {
+            grid-template-columns: repeat(auto-fill, 300px);
+        }
+
+        .offres-cartes
+        {
+            grid-template-columns: repeat(auto-fill, 300px);
+        }
+
+        .grilleUtilite
+        {
+            grid-template-rows: repeat(10, 130px);
+        }
+    }
+
+/* Contact */
+
+    /* Bannière */
+
+    #maincont 
+    {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 200, 0.5)),
+                    url("../ressources/contact/banner_contact.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        padding: 5vw;
+    }
+
+    #maincont h2 {
+        font-size: 3vw;
+    }
+
+    #maincont p {
+        font-size: 1.5vw;
+    }
+    
+    #dibutt 
+    {
+        text-align: end;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        border-radius: 3px;
+        font-size: 1.5vw;
+    }
+    
+    #dibutt a
+    {
+        padding: 1.5vw;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.3s;
+        background-color: #fff;
+    }
+    
+    #dibutt a:hover 
+    {
+        color: #fff;
+        background-color: #000;
+    }
+    
+    /* Sections */
+
+        /* Global */
+
+        #contform, #contho 
+        {
+            background-color: #fff;
+            margin: 5vw 15vw;
+            padding: 1vw 3vw;
+            text-align: right;
+            font-size: 2vw;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+    
+        /* Formulaire */
+
+        #contform h3
+        {
+            text-align: center;
+        }
+    
+        #contform input[type=text],#contform input[type=email], #contform textarea 
+        {
+            width: 60%;
+            height: 2.5vw;
+            border: 2px solid lightblue;
+            border-radius: 5px;
+        }
+    
+        #contform textarea 
+        {
+            height: 150px;
+            resize: none;
+        }
+    
+        #contform form div 
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0px;
+        }
+
+        #contform form div p {
+            font-size: 2vw;
+        }
+    
+        #contform input[type=submit] 
+        {
+            margin-top: 2vw;
+            padding: 1vw 2vw;
+            border: none;
+            background-color: #518cf9;
+            border-radius: 5px;
+            color: #fff;
+            transition: 0.3s;
+        }
+    
+        #contform input[type=submit]:hover 
+        {
+            color: #fff;
+            background-color: black;
+        }
+
+        #contho p {
+            font-size: 1.5vw;
+            text-align: center;
+        }
+
+        #contho h3 {
+            margin-bottom: 10vw;
+        }
